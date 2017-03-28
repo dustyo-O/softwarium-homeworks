@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px; }
+
+li {
+  list-style-type: none;
+  transition: all 0.2s ease-in-out; }
+
+a {
+  text-decoration: none; }
+
+h1 {
+  font-weight: 400; }
+
+main {
+  width: 480px; }
+
+main,
+.main-nav > ul {
+  margin-left: 280px; }
+
+.main-nav {
+  border-bottom: 1px solid #000; }
+
+.main-nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: start; }
+  .main-nav > ul li {
+    box-sizing: border-box;
+    margin-right: 20px;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    border: 2px solid transparent; }
+    .main-nav > ul li:hover {
+      border-bottom: 2px solid #000; }
+  .main-nav > ul a {
+    font-size: 1em;
+    color: #3c3c3c;
+    padding: 1.5em 0; }
+
+.heading-container,
+section header,
+ul {
+  display: flex;
+  align-items: center; }
+
+.main-header .heading-container {
+  margin: 2em 0; }
+  .main-header .heading-container a {
+    font-size: 0.875em;
+    align-self: flex-end; }
+    .main-header .heading-container a i {
+      margin-left: 0.5em;
+      margin-right: 0.3em; }
+.main-header li {
+  border: 1px solid rgba(0, 0, 0, 0.3); }
+  .main-header li:hover, .main-header li.active-link {
+    background-color: #FEEB9E; }
+  .main-header li:first-child {
+    border-radius: 5px 0 0 5px;
+    border-right: 0; }
+  .main-header li:last-child {
+    border-radius: 0 5px 5px 0;
+    border-left: 0; }
+  .main-header li:nth-child(3) {
+    border-left: 0;
+    border-right: 0; }
+  .main-header li a {
+    display: block;
+    font-size: 0.8em;
+    padding: 0.4em 1.5em;
+    color: #000; }
+
+section article {
+  margin-bottom: 2em; }
+section h2 {
+  font-weight: 500; }
+section .heading-container {
+  margin: 1.5em 0; }
+  section .heading-container span {
+    display: block;
+    position: relative;
+    background-color: #FCCA00;
+    width: 35px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 0 0 1.5em; }
+    section .heading-container span::after {
+      content: "";
+      position: absolute;
+      left: 35px;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 12px solid transparent;
+      border-right: 6px solid #FCCA00;
+      border-left: 13px solid transparent;
+      border-top: 13px solid transparent;
+      transform: rotateY(-180deg);
+      clear: both; }
+
+.profile-header {
+  font-size: 0.875em;
+  margin-bottom: 0.5em; }
+  .profile-header .profile-photo {
+    border-radius: 50%;
+    width: 35px;
+    border: 2px solid rgba(0, 0, 0, 0.6); }
+  .profile-header .profile-name,
+  .profile-header .profile-score {
+    margin: 0 0.5em; }
+  .profile-header .profile-date,
+  .profile-header .profile-score {
+    color: rgba(0, 0, 0, 0.7); }
+  .profile-header .profile-date::before, .profile-header .profile-date::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 2px;
+    margin: 7px 5px 0 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7); }
+  .profile-header .profile-date::before {
+    float: left; }
+  .profile-header .profile-date::after {
+    float: right; }
+  .profile-header i {
+    font-size: 2.2em;
+    color: #FCCA00;
+    align-self: flex-start; }
+
+.profile-comment {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  line-height: 1.5; }
+  .profile-comment a {
+    color: rgba(0, 0, 0, 0.5); }
+    .profile-comment a:hover {
+      color: black; }
+
+.textarea-answer {
+  width: 100%; }
+  .textarea-answer h5 {
+    margin: 1.5em 0 1em 0; }
+  .textarea-answer textarea {
+    width: inherit;
+    height: 100px; }
+  .textarea-answer a {
+    font-size: 0.875em;
+    display: block;
+    border-radius: 4px;
+    background-color: #eee;
+    float: right;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1.5em;
+    margin-top: 0.5em; }
+    .textarea-answer a:hover {
+      color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(238, 238, 238, 0.8); }
+
+.profile-footer a {
+  display: block;
+  padding: 0.3em 1em;
+  font-size: 0.7em;
+  color: rgba(0, 0, 0, 0.7); }
+  .profile-footer a:hover {
+    color: black; }
+.profile-footer li:not(:last-child) {
+  margin-right: 1em;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3); }
+  .profile-footer li:not(:last-child):hover {
+    background-color: #FEEB9E; }
+  .profile-footer li:not(:last-child) a {
+    color: black; }
+
+.show-all-reviews {
+  display: block;
+  text-align: center;
+  color: #000;
+  margin: 1em 0;
+  padding: 0.5em 0;
+  border-radius: 4px;
+  background-color: #eee; }
+  .show-all-reviews:hover {
+    color: rgba(0, 0, 0, 0.7); }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*# sourceMappingURL=style.css.map */

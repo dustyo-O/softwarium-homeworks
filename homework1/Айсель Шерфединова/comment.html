@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<style>
+		*{
+		    margin: 0;
+		    padding: 0;
+		    font-size: 100%;
+		}
+		a{
+		    text-decoration: none;
+		}
+		body{
+		    font-family: Arial,Helvetica,sans-serif;
+
+		    color: #383838;
+		    background: #fff;
+		}
+		.wrap{
+		    width: 40%;
+		    margin: 20px 0 100px 20%;
+		}
+		article{
+		    margin-top: 25px;
+		}
+		article a{
+		    color: #bbb;
+		}
+		article  header{
+		    height: 40px;
+
+		    color: #bbb;
+		}
+		article  header  a,span,time,i,img{
+		    vertical-align: middle;
+		}
+
+		.user-img{
+		    width: 40px;
+		    height: 40px;
+
+		    border-radius: 50%;
+		}
+		.username{
+		    font-weight: 600;
+
+		    color: #383838;
+		}
+		article  main  p{
+		    margin: 10px 0;
+		}
+		article button{
+		    font-size: 14px;
+
+		    padding: 5px 10px;
+
+		    border: 1px solid #ccc;
+		    border-radius: 2px;
+		    background: #fff;
+		}
+		article button:hover{
+		    background: #feeaa3;
+		}
+		.complain-button{
+		    margin: 0 15px;
+		}
+		.reply-for-comment{
+		    margin-top: 20px;
+		    padding-left: 20px;
+
+		    border-left: 3px solid #f6bd14;
+		}
+		.show-all-comment{
+		    font-weight: 600;
+
+		    width: 100%;
+		    margin: 30px 0;
+		    padding: 7px 0;
+
+		    border: none;
+		    border-radius: 2px;
+		    background: #eee;
+		}
+		.show-all-comment:hover{
+		    background: #feeaa3;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<article>
+			<header>
+				<a href="#">
+					<img class="user-img" src="img.png" alt="">
+				</a>
+				<span class="username">Лидия Никарагуа</span>
+				<time>• 23 октября 2015 •</time>
+				<span class="mark">оценка:</span>
+				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+			</header>		
+			<main>			
+				<p> Отлично отметила свой день рождения в этом уютном месте в зале с камином. Очень вежливый персонал, оригинальные блюда. Особенно порадовала скидка для именинника и сюрприз от ресторана в честь дня рождения) </p>
+				<button class="reply-button">Редактировать ответ</button>
+				<button class="complain-button">Пожаловаться</button>
+				<a href="#">Ссылка на отзыв</a>
+			</main>
+			<div class="reply-for-comment">
+				<p>Отлично отметила свой день рождения в этом уютном месте в зале с камином. Очень вежливый персонал, оригинальные блюда. Особенно порадовала скидка для именинника и сюрприз от ресторана в честь дня рождения)</p>
+			</div>
+		</article>
+		<button class="show-all-comment">Все 135 отзывов</button>
+	</div>	
+</body>
+</html>

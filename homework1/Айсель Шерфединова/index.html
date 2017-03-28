@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<style>
+		* {
+			font-size: 100%;
+
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+		ul {
+			list-style-type: none;
+		}
+
+		body {
+			font-family: Arial,Helvetica,sans-serif;
+			font-size: 16px;
+
+			color: #383838;
+			background: #fff;
+		}
+
+		.all-wrap {
+			width: 40%;
+			margin: 20px 0 100px 20%;
+		}
+		header h1 {
+			font-size: 34px;
+			font-weight: 500;
+
+			display: inline-block;
+
+			color: #383838;
+		}
+		.go-to-map {
+			margin-left: 20px;
+
+			color: #00bfff;
+		}
+		.go-to-map i {
+			color: #999;
+		}
+		header nav {
+			display: inline-block;
+			overflow: hidden;
+
+			margin: 30px 0;
+
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		header nav li {
+			float: left;
+
+			border-left: 1px solid #ccc;
+		}
+		header nav li:first-child {
+			border-left: none;
+		}
+		header nav li a {
+			line-height: 25px;
+
+			display: block;
+
+			height: 25px;
+			padding: 0 20px;
+
+			color: #383838;
+		}
+		header nav li a:hover {
+			background: #feeaa3;
+		}
+
+
+		.comments h2 {
+			font-size: 26px;
+			font-weight: 500;
+
+			display: inline-block;
+
+			vertical-align: middle;
+		}
+		.rating {
+			position: relative;
+
+			display: inline-block;
+
+			margin-left: 20px;
+			padding: 3px 10px 3px 5px;
+
+			vertical-align: middle;
+
+			background: #f6bd14;
+		}
+		.rating:before {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			content: '';
+
+			border-top: 12px solid #fff;
+			border-left: 7px solid #f6bd14;
+		}
+		.rating:after {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+
+			content: '';
+
+			border-bottom: 12px solid #fff;
+			border-left: 7px solid #f6bd14;
+		}
+		article {
+			margin-top: 25px;
+		}
+		article a {
+			color: #bbb;
+		}
+		article header {
+			height: 40px;
+
+			color: #bbb;
+		}
+		article header  a, span, time, i, img {
+			vertical-align: middle;
+		}
+		.user-img {
+			width: 40px;
+			height: 40px;
+			margin-right: 10px;
+
+			border-radius: 50%;
+		}
+		.username {
+			font-weight: 600;
+
+			color: #383838;
+		}
+		.like-icon{
+			color:#f6bd14;
+		}
+		article main p {
+			margin: 10px 0;
+		}
+		article button {
+			font-size: 14px;
+
+			padding: 5px 10px;
+
+			border: 1px solid #ccc;
+			border-radius: 2px;
+			background: #fff;
+		}
+		article button:hover {
+			background: #feeaa3;
+		}
+
+		button:focus {
+			outline: none;
+		}
+		.complain-button {
+			margin: 0 15px;
+		}
+
+		.reply-form {
+			margin-top: 30px;
+		}
+		.reply-form  h1 {
+			font-weight: 600;
+		}
+		.reply-form textarea {
+			overflow: auto;
+
+			width: 100%;
+			height: 100px;
+
+			resize: none;
+		}
+		.reply-form input {
+			float: right;
+
+			margin-top: 10px;
+			padding: 5px 20px;
+
+			color: #777;
+			border: none;
+			border-radius: 2px;
+			background: #f2f1ed;
+		}
+
+		.show-all-comment {
+			font-weight: 600;
+
+			width: 100%;
+			margin: 30px 0;
+			padding: 7px 0;
+
+			border: none;
+			border-radius: 2px;
+			background: #eee;
+		}
+		.show-all-comment:hover {
+			background: #feeaa3;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="all-wrap">
+		<header>
+			<h1>Кафе Гладиатор</h1>
+			<a class="go-to-map " href="#">
+				<i class="fa fa-map-marker" aria-hidden="true"></i>
+				Страница на Картах
+			</a>
+			<nav>
+				<ul>
+					<li><a href="#">Информация</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Фото</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Статистика</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="comments">
+			<h2><span>12</span> отзывов об организации</h2>
+			<div class="rating">9.8</div>				
+
+			<article>
+				<header>
+					<a href="#">
+						<img class="user-img" src="img.png" alt="">
+					</a>
+					<span class="username">Василий Привалов</span>
+					<time>• 14 апреля 2016 •</time>
+					<span>оценка:</span>
+					<i class="like-icon fa fa-thumbs-o-up" aria-hidden="true"></i>
+				</header>
+				<main>
+					<p> Отлично отметила свой день рождения в этом уютном месте в зале с камином. Очень вежливый персонал, оригинальные блюда. Особенно порадовала скидка для именинника и сюрприз от ресторана в честь дня рождения) </p>
+					<button class="reply-button">Ответить</button>
+					<button class="complain-button">Пожаловаться</button>
+					<a href="#">Ссылка на отзыв</a>
+				</main>	
+			</article>
+
+
+			<article>
+				<header>
+					<a href="#">
+						<img class="user-img" src="img.png" alt="">	
+					</a>
+					<span class="username">Илья Пряников</span>
+					<time>• 9 мая 2016 •</time>
+					<span>оценка:</span>
+					<i class="like-icon fa fa-thumbs-o-up" aria-hidden="true"></i>
+				</header>
+				<main>
+					<p> Отлично отметила свой день рождения в этом уютном месте в зале с камином. Очень вежливый персонал, оригинальные блюда. Особенно порадовала скидка для именинника и сюрприз от ресторана в честь дня рождения) </p>
+					<button class="reply-button">Ответить</button>
+					<button class="complain-button">Пожаловаться</button>
+					<a href="#">Ссылка на отзыв</a>
+				</main>				
+			</article>
+
+
+			<article>
+				<header>
+					<a href="#">
+						<img class="user-img" src="img.png" alt="">
+					</a>
+					<span class="username">Лидия Никарагуа</span>
+					<time>• 23 октября 2015 •</time>
+					<span>оценка:</span>
+					<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+				</header>
+				<main>
+					<p> Отлично отметила свой день рождения в этом уютном месте в зале с камином. Очень вежливый персонал, оригинальные блюда. Особенно порадовала скидка для именинника и сюрприз от ресторана в честь дня рождения) </p>
+					<button class="reply-button">Ответить</button>
+					<button class="complain-button">Пожаловаться</button>
+					<a href="#">Ссылка на отзыв</a>
+				</main>					
+				<div class="reply-form">
+					<form action="">
+						<h1>Напишите ответ на отзыв</h1>
+						<p><textarea></textarea></p>
+						<p><input type="submit" value="Опубликовать"></p>
+					</form>
+				</div>			
+			</article>
+			
+			<button class="show-all-comment">Все 135 отзывов</button>
+		</div>
+	</div>	
+</body>
+</html>

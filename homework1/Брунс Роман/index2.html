@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>123</title>
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                font-size: 0;
+            }
+            
+            html {
+                height: 100%;
+            }
+            
+            input {
+                outline:none;
+            }
+            
+            body {
+                height: 100%;
+                font-family: Helvetica, sans-serif;
+                color: #343434;
+            }
+            
+            a, h1, h2, p {
+                text-decoration: none;
+                font-size: 14px;
+                color: #343434;
+            }
+            
+            /*********HEADER***********/
+            
+            h1 {
+                display: inline-block;
+                font-weight: 500;
+                font-size: 35px;
+                margin: 29px 11px 29px 3px;
+            }
+                        
+            .fa-map-marker {
+                margin-right: 5px;
+            }
+            
+            #content .map {
+                font-size: 14px;
+                color: #0058ff;
+            }
+
+            #content {
+                width: 955px;
+                margin-left: 52px;
+                height: 100%;
+            }
+            
+            /******Coment*******/
+            
+            .comment_block {
+                display: inline-block;
+                width: 100%;
+                margin-top: 25px;
+                /*background: red;*/
+            }
+            
+            .comment_avatar {
+                float: left;
+                width: 65px;
+                height: 65px;
+            }
+            
+            .comment_name {
+                float: left;
+                font-size: 22px;
+                font-weight: 600;
+                padding-left: 20px;
+                padding-right: 4px;
+                line-height: 65px;
+            }
+            
+            .comment_point {
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: #bdbdbd;
+                float: left;
+                margin-top: 32px;
+                margin-left: 12px;
+            }
+            
+            .comment_date {
+                float: left;
+                color: #bdbdbd;
+                padding-left: 10px;
+                line-height: 65px;
+                font-size: 22px;
+            }
+            
+            .dislike {
+                float: left;
+                width: 45px;
+                height: 45px;
+                font-size: 45px;
+                padding-left: 12px;
+                color: #797979;
+            }
+            
+            .fa-thumbs-o-down {
+                line-height: 65px;
+            }
+            
+            .comment_text {
+                padding-top: 80px;
+                font-size: 24px;
+                /*font-weight: bold;*/
+                line-height: 34px;
+            }
+            
+            .more_reading {
+                padding-left: 12px;
+                font-size: 12px;
+                /*font-weight: normal;*/
+                color: #6a6396;
+            }
+            
+            .comment_button_answer:active, .comment_button_report:active {
+                background: #feeaa1;
+            }
+            
+            .comment_button_answer {
+                width: 295px;
+                height: 48px;
+                font-size: 24px;
+                margin-top: 40px;
+                background: white;
+                border: 1px solid #cccccc;
+                border-radius: 6px;
+            }
+            
+            .comment_button_report {
+                width: 222px;
+                margin-left: 40px;
+                height: 48px;
+                font-size: 24px;
+                margin-top: 40px;
+                background: white;
+                border: 1px solid #cccccc;
+                border-radius: 6px;
+            }
+            
+            .comment_link {
+                font-size: 24px;
+                padding-left: 37px;
+                color: #6a6396;
+            }
+            
+            .editing {
+                width: calc(100%-8px);
+                margin-top: 42px;
+                border-left: 8px solid #ffc90f;
+            }
+            
+            .editing p {
+                padding-left: 42px;
+                font-size: 24px;
+                line-height: 34px;
+            }
+            
+            .contents {
+                padding-bottom: 16px;
+                font-weight: 600;
+            }
+            
+            .all_comments {
+                font-size: 24px;
+                color: #22211d;
+                font-weight: 600;
+                width: 100%;
+                height: 80px;
+                margin-top: 70px;
+                margin-bottom: 62px;
+                background: #f2f1ed;
+                border: 0px;
+                border-radius: 6px;
+            }
+            
+            
+            
+        </style>
+    </head>
+    
+    <body>
+        <div id="content">
+            
+            <div class="comment_block">
+                <img src="img/img3.1.jpg" class="comment_avatar" alt="">
+                <p class="comment_name">Лидия Никарагуа</p>
+                <div class="comment_point"></div>
+                <p class="comment_date">23 октября 2016</p>
+                <div class="comment_point"></div>
+                <p class="comment_date">оценка:</p>
+                <p class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></p>
+                <p class="comment_text">Не понравилось. На Белорусской и Пролетарской как то поуютнее, обстановка поприятнее. Маленький выбор пива, а цена на него большая. Лёффе 0.33 290р!!! Не очень понравилась еда. Брали фирменные бургеры. Мясо было пересоленное и переперченное. Плюс какое то слишком жирное. В итоге, просуммировав все, считаю, что при нынешнем уровне качества заведения цены на еду и напитки должны быть ниже.</p>
+                <input type="button" class="comment_button_answer" value="Редактировать ответ">
+                <input type="button" class="comment_button_report" value="Пожаловаться">
+                <a href="#" class="comment_link">Ссылка на отзыв</a>
+            </div>
+            
+            <div class="editing">
+                    <p class="contents">Ответ</p>
+                    <p>Не понравилось. На Белорусской и Пролетарской как то поуютнее, обстановка поприятнее. Маленький выбор пива, а цена на него большая. Лёффе 0.33 290р!!! Не очень понравилась еда. Брали фирменные бургеры. Мясо было пересоленное и переперченное. Плюс какое то слишком жирное. В итоге, просуммировав все, считаю, что при нынешнем уровне качества заведения цены на еду и напитки должны быть ниже.</p>
+            </div>
+            
+            <input type="button" value="Все 134 отзывов" class="all_comments">
+            
+        </div>
+    </body>
+</html>

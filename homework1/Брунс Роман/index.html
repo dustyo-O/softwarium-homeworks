@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>123</title>
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                font-size: 0;
+            }
+            
+            html {
+                height: 100%;
+            }
+            
+            input {
+                outline:none;
+            }
+            
+            body {
+                height: 100%;
+                font-family: Helvetica, sans-serif;
+                color: #343434;
+            }
+            
+            a, h1, h2, p {
+                text-decoration: none;
+                font-size: 14px;
+                color: #343434;
+            }
+            
+            /*********HEADER***********/
+            
+            h1 {
+                display: inline-block;
+                font-weight: 500;
+                font-size: 35px;
+                margin: 29px 11px 29px 3px;
+            }
+                        
+            .fa-map-marker {
+                margin-right: 5px;
+            }
+            
+            #content .map {
+                font-size: 14px;
+                color: #0058ff;
+            }
+
+            #content {
+                width: 480px;
+                margin-left: 225px;
+                height: 100%;
+            }
+            
+            nav {
+                width: 100%;
+                height: 28px;
+            }
+            
+            nav ul li {
+                float: left;
+                list-style: none;
+                border-top: 1px solid #cccccc;
+                border-right: 1px solid #cccccc;
+                border-bottom: 1px solid #cccccc;
+            }
+            
+            nav ul li:first-child {
+                border: 1px solid #cccccc;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+            }
+            
+            nav ul li:last-child {
+                border-top: 1px solid #cccccc;
+                border-right: 1px solid #cccccc;
+                border-bottom: 1px solid #cccccc;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+            }
+            
+            nav ul li a {
+                display: block;
+                font-size: 12px;
+                padding: 6px 21px 6px 21px;
+            }
+            
+            #review {
+                padding: 6px 29px 6px 29px;
+            }
+            
+            nav ul li a:active {
+                background: #feeaa1;
+            }
+            
+            /******Organization******/
+            
+            h2 {
+                display: inline-block;
+                float: left;
+                font-weight: 100;
+                font-size: 24px;
+                margin-top: 30px;
+                margin-left: 5px;
+            }
+            
+            #icon_1 {
+                display: table;
+                float: left;
+                width: 30px;
+                height: 24px;
+                background: #ffcf1b;
+                margin-left: 16px;
+                margin-top: 32px;
+            }
+            
+            #icon_2 {
+                /*display: block;*/
+                float: left;
+                margin-top: 32px;
+                border-color: transparent transparent transparent #ffcf1b; 
+                border-style: solid; 
+                border-width: 12px 12px 12px 12px; 
+            }
+            
+            #icon_1 p {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                padding-top: 3px;
+                padding-left: 3px;
+                font-size: 16px;
+            }
+            
+            /******Coment*******/
+            
+            .comment_block {
+                display: inline-block;
+                width: 100%;
+                margin-top: 25px;
+                margin-bottom: 6px;
+                /*background: red;*/
+            }
+            
+            .comment_avatar {
+                float: left;
+                width: 31px;
+                height: 31px;
+                margin-left: 3px;
+            }
+            
+            .comment_name {
+                float: left;
+                font-size: 12px;
+                font-weight: 600;
+                padding-left: 10px;
+                padding-right: 3px;
+                line-height: 31px;
+            }
+            
+            .comment_point {
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                background: #bdbdbd;
+                float: left;
+                margin-top: 14px;
+                margin-left: 5px;
+            }
+            
+            .comment_date {
+                float: left;
+                color: #bdbdbd;
+                padding-left: 5px;
+                line-height: 31px;
+                font-size: 12px;
+            }
+            
+            .like {
+                float: left;
+                width: 21px;
+                height: 21px;
+                font-size: 22px;
+                line-height: 26px;
+                padding-left: 8px;
+                color: #ffca2a;
+                
+            }
+            
+            .dislike {
+                float: left;
+                width: 21px;
+                height: 21px;
+                font-size: 22px;
+                line-height: 26px;
+                padding-left: 8px;
+                color: #797979;
+            }
+            
+            .comment_text {
+                padding-top: 35px;
+                padding-left: 5px;
+                font-size: 12px;
+                /*font-weight: bold;*/
+                line-height: 18px;
+            }
+            
+            .more_reading {
+                padding-left: 12px;
+                font-size: 12px;
+                /*font-weight: normal;*/
+                color: #6a6396;
+            }
+            
+            .comment_button_answer:active, .comment_button_report:active {
+                background: #feeaa1;
+            }
+            
+            .comment_button_answer {
+                width: 76px;
+                margin-left: 5px;
+                height: 22px;
+                font-size: 12px;
+                margin-top: 13px;
+                background: white;
+                border: 1px solid #cccccc;
+                border-radius: 2px;
+            }
+            
+            .comment_button_report {
+                width: 110px;
+                margin-left: 20px;
+                height: 22px;
+                font-size: 12px;
+                margin-top: 13px;
+                background: white;
+                border: 1px solid #cccccc;
+                border-radius: 2px;
+            }
+            
+            .comment_link {
+                font-size: 12px;
+                padding: 20px;
+                color: #6a6396;
+            }
+            
+            .comment_review {
+                font-weight: 600;
+                margin-left: 5px;
+                margin-top: 10px;
+                font-size: 12px;
+            }
+            
+            .comment {
+                width: 470px;
+                height: 100px;
+                margin-top: 10px;
+                margin-left: 5px;
+                /*margin-right: 5px;*/
+                background: white;
+                border-color: #cccccc;
+                resize: none;
+                font-size: 14px;
+                outline: none;
+            }
+            
+            .fa-times {
+                position: relative;
+                font-size: 20px;
+                font-weight: 100;
+                top: -100px;
+                left: 458px;
+                color: #cccccc;
+            }
+            
+            .publish {
+                font-size: 14px;
+                color: #7c7c7c;
+                width: 125px;
+                height: 30px;
+                margin-left: 352px;
+                margin-top: -11px;
+                background: #ededed;
+                border: 0px;
+                border-radius: 2px;
+            }
+            
+            .publish:active {
+                background: #feeaa1;
+            }
+            
+            .all_comments {
+                font-size: 16px;
+                color: #22211d;
+                font-weight: 600;
+                /*width: 100%;*/
+                width: 472px;
+                height: 39px;
+                margin-left: 5px;
+                margin-top: 27px;
+                background: #f2f1ed;
+                border: 0px;
+                border-radius: 2px;
+            }
+            
+            
+        </style>
+    </head>
+    
+    <body>
+        <div id="content">
+            <h1>Кафе Гладиатор</h1>
+            <a href="#" class="map"><i class="fa fa-map-marker" aria-hidden="true"></i>Страница на Картах</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Информация</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Фото</a></li>
+                    <li><a href="#" id="review">Отзывы</a></li>
+                    <li><a href="#">Статистика</a></li>
+                </ul>
+            </nav>
+            <h2>12 отзывов об организации</h2>
+            <div id="icon_1"><p>9.8</p></div>
+            <div id="icon_2"></div>
+            
+            <!--Comment-->
+            <div class="comment_block">
+                <img src="img/img1.jpg" class="comment_avatar" alt="">
+                <p class="comment_name">Василий Привалов</p>
+                <div class="comment_point"></div>
+                <p class="comment_date">4 апреля 2016</p>
+                <div class="comment_point"></div>
+                <p class="comment_date">оценка:</p>
+                <p class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                <p class="comment_text">Очень давно знаю это место буквально со дня открытия и для нашей семьи в особенности ребенка, оно стало самым любимым. Здесь рай не только для взрослых по части вкусной итальянской кухни и романтики<a href="#" class="more_reading">читать полностью</a></p>
+                <input type="button" class="comment_button_answer" value="Ответить">
+                <input type="button" class="comment_button_report" value="Пожаловаться">
+                <a href="#" class="comment_link">Ссылка на отзыв</a>
+            </div>
+            
+            <div class="comment_block">
+                <img src="img/img2.jpg" class="comment_avatar" alt="">
+                <p class="comment_name">Илья Пряников</p>
+                <div class="comment_point"></div>
+                <p class="comment_date">9 мая 2016</p>
+                <div class="comment_point"></div>
+                <p class="comment_date">оценка:</p>
+                <p class="like"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></p>
+                <p class="comment_text">Удивительное, хорошее место. Кухня на высоте. Интерьер крайне приятный, играет рояль каждый раз и для деток проводят мастер-классы. На радость родителям - бесплатно!</p>
+                <input type="button" class="comment_button_answer" value="Ответить">
+                <input type="button" class="comment_button_report" value="Пожаловаться">
+                <a href="#" class="comment_link">Ссылка на отзыв</a>
+            </div>
+            
+            <div class="comment_block">
+                <img src="img/img3.jpg" class="comment_avatar" alt="">
+                <p class="comment_name">Лидия Никарагуа</p>
+                <div class="comment_point"></div>
+                <p class="comment_date">23 октября 2016</p>
+                <div class="comment_point"></div>
+                <p class="comment_date">оценка:</p>
+                <p class="dislike"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></p>
+                <p class="comment_text">Не понравилось. На Белорусской и Пролетарской как то поуютнее, обстановка поприятнее. Маленький выбор пива, а цена на него большая. Лёффе 0.33 290р!!! Не очень понравилась еда. Брали фирменные бургеры. Мясо было пересоленное и переперченное. Плюс какое то слишком жирное. В итоге, просуммировав все, считаю, что при нынешнем уровне качества заведения цены на еду и напитки должны быть ниже.</p>
+                <input type="button" class="comment_button_answer" value="Ответить">
+                <input type="button" class="comment_button_report" value="Пожаловаться">
+                <a href="#" class="comment_link">Ссылка на отзыв</a>
+            </div>
+            
+            <p class="comment_review">Напишите ответ на отзыв</p>
+            <textarea class="comment" name="" id="" cols="30" rows="10"></textarea><a href="#" class="fa fa-times" aria-hidden="true"></a>
+            <input type="button" value="Опубликовать" class="publish">
+            <input type="button" value="Все 134 отзывов" class="all_comments">
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="27px" viewBox="0 0 22 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>YMRatingLikeButton_iOS7@2x 2 Copy 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group-Copy-7" sketch:type="MSLayerGroup" transform="translate(-903.000000, -223.000000)">
+            <g id="YMRatingLikeButton_iOS7@2x-2-Copy-8" transform="translate(903.000000, 224.000000)" sketch:type="MSShapeGroup">
+                <g id="Path-166-+-Rectangle-359">
+                    <path d="M6.90476393,10.0310896 C5.92369077,10.7895065 5.29604912,11.9806578 5.3042984,13.3208989 L5.34278292,19.5733883 C5.34838929,20.4842431 6.09429402,21.2395062 7.00867966,21.2395062 L14.8888557,21.2395062 C16.7304137,21.2395062 18.611403,19.8007095 19.0956354,18.0258638 L20.6299841,12.4020505 C21.1166865,10.6181511 20.0189413,9.1863373 18.1836186,9.18378286 L12.6807082,9.17612378 C13.0316,6.85209526 13.5433056,2.77307651 13.0056868,1.68248354 C12.2413296,0.131937587 11.8796252,0.200969837 11.8796252,0.200969837 C11.3572707,-0.208587651 10.7255907,0.0244641612 10.4932205,0.633034573 L6.90476393,10.0310896 Z" id="Path-166" stroke="#7F6500" stroke-width="2" fill="#FFCC00"></path>
+                    <rect id="Rectangle-359" fill="#7F6500" x="0" y="11.8975309" width="3" height="10" rx="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

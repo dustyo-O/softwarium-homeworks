@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>123</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <label>Кол-во билетов</label><input type="text" id="ticketsNumber">
+        <button id="getNumber">Отправить</button>
+        <div id="ticketsBlock"></div>
+        <button id="go" style="display : none">Отправить</button>
+        <script>
+            document.getElementById('getNumber').onclick = function () {
+                document.getElementById('go').style = ("display : block");
+                var quantityTicets = document.getElementById('ticketsNumber').value;
+                
+                for (var i = 0; i < quantityTicets; i++) {
+                    document.getElementById('ticketsBlock').innerHTML += ("от <input type='text' id='firstCity"+i+"'> до <input type='text' id='secondCity"+i+"'><br>");
+                }
+
+                document.getElementById('go').onclick = function () {
+                    var first = document.getElementById('firstCity0').value,
+                        second = document.getElementById('secondCity0').value,
+                        ticket = 0,
+                        attendance = 0,
+                        visited = [first, second];
+
+                    for (var j = 1; j < quantityTicets; j++) {
+                        var appointmentCity = document.getElementById('firstCity'+j).value,
+                            ensuingCity = document.getElementById('secondCity'+j).value;
+                            if (second === appointmentCity) {
+                                attendance = parseInt(attendanceCheck());
+                                
+                                if (attendance === 0) {
+                                    second = ensuingCity;
+                                    first = appointmentCity;
+                                    ticket = j;
+                                    visited.push(second);
+                                    j = -1;
+                                } else {
+                                    continue;
+                                }
+                            }
+                    }
+                    
+                    if (visited.length != 2) {
+                        alert(visited.join(' - '));
+                    } else alert("построить маршрут невозможно!");
+                    
+                    function attendanceCheck () {
+                        var check = 0;
+                        
+                        for (var i = 0; i < visited.length; i++) {
+                            
+                            if (ensuingCity === visited[i]) {
+                                check++;
+                                return check;
+                            }
+                        }
+                        return 0;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

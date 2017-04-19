@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Помогите Василию</title>
+        <style>
+            main {
+                text-align: center;
+            }
+            button, input {
+                padding: 5px 10px;
+
+                border: 1px solid #bbb;
+                border-radius: 3px;
+                outline: none;
+            }
+            button {
+                font-size: 20px;
+
+                background: hsl(75, 100%, 80%);;
+            }
+            button:hover, button:focus {
+                transition-duration: 0.2s;
+
+                background: hsl(75, 100%, 64%);
+            }
+
+            input[type="number"] {
+                width: 3em;
+
+                -moz-appearance: textfield;
+            }
+            input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+            }
+            input:focus {
+                background: hsl(75, 100%, 80%);
+            }          
+        </style>
+    </head>
+    <body>
+        <main>
+            <p>
+                <label for="num">Количество билетов:</label>
+                <input type="number" id="num" value="6">
+            </p>
+            <p>
+                <input type="text" id="from0" value="Минск">
+                -
+                <input type="text" id="to0" value="Куала-Лумпур">
+            </p>
+            <p>
+                <input type="text" id="from1" value="Токио">
+                -
+                <input type="text" id="to1" value="Мадрид">
+            </p>
+            <p>
+                <input type="text" id="from2" value="Куала-Лумпур">
+                -
+                <input type="text" id="to2" value="Симферополь">
+            </p>
+            <p>
+                <input type="text" id="from3" value="Нью-Йорк">
+                -
+                <input type="text" id="to3" value="Канберра">
+            </p>
+            <p>
+                <input type="text" id="from4" value="Симферополь">
+                -
+                <input type="text" id="to4" value="Токио">
+            </p>
+            <p>
+                <input type="text" id="from5" value="Канберра">
+                -
+                <input type="text" id="to5" value="Минск">
+            </p>
+            <p>
+                <input type="text" id="from6">
+                -
+                <input type="text" id="to6">
+            </p>
+            <p>
+                <input type="text" id="from7">
+                -
+                <input type="text" id="to7">
+            </p>
+            <p>
+                <input type="text" id="from8">
+                -
+                <input type="text" id="to8">
+            </p>
+            <p>
+                <input type="text" id="from9">
+                -
+                <input type="text" id="to9">
+            </p>
+            <button id="button" >Поехали!</button>
+        </main>
+        <script>
+            var n, 
+                from = [], 
+                to = [], 
+                toIdx = [], 
+                path = [];
+
+            function startIndex() {
+                var start = -1;
+                for (var i = 0; i < n; i++) {
+                    if (toIdx[i] === -1) {
+                        if (start !== -1)
+                            return -1;
+                        start = i;
+                    }
+                }
+                return start;
+            }
+            function makePath() {
+                n = +document.getElementById('num').value;
+                from.length = 0;
+                to.length = 0;
+                toIdx.length = 0;
+                path.length = 0;
+
+                for (var i = 0; i < n; i++) {
+                    from[i] = document.getElementById('from' + i).value;
+                    to[i] = document.getElementById('to' + i).value;
+                }
+
+                toIdx = from.map(function(item) {
+                    return to.indexOf(item);
+                });
+
+                path[0] = startIndex();
+                if (path[0] === -1) {
+                    alert("построить маршрут невозможно!");
+                    return;
+                }
+
+                var res = from[path[0]];
+                for (var i = 1; i < n; i++) {
+                    path[i] = toIdx.indexOf(path[i - 1]);
+                    if (path[i] === -1) {
+                        alert("построить маршрут невозможно!");
+                        return;
+                    }
+                    res += " - " + from[path[i]];
+                }
+                res += " - " + to[path[n - 1]];
+                alert(res);
+            }
+            document.getElementById('button').onclick = makePath;
+        </script>
+    </body>
+</html>
